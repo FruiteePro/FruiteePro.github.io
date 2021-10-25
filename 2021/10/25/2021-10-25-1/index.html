@@ -124,7 +124,7 @@
             <section class="inner">
                 <section class="inner-main">
                     <div class="post">
-    <article id="post-ckv6em69p0000tc5q577kbsat" class="article article-type-post" itemscope
+    <article id="post-ckv6f2g6g00002k5q4ilfg400" class="article article-type-post" itemscope
     itemprop="blogPost">
 
     <div class="article-inner">
@@ -178,7 +178,7 @@
 <span id="more"></span>
 
 <hr>
-<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a><strong>前期准备</strong></h1><h2 id="创建-GitHub-仓库"><a href="#创建-GitHub-仓库" class="headerlink" title="创建 GitHub 仓库"></a><strong>创建 GitHub 仓库</strong></h2><p>在 GitHub 创建一个新的 repository，名字命名为以下格式：</p>
+<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a><strong>前期准备</strong></h1><h2 id="创建-GitHub-仓库"><a href="#创建-GitHub-仓库" class="headerlink" title="创建 GitHub 仓库"></a><strong>创建 GitHub 仓库</strong></h2><p>在 GitHub 创建一个新的 <code>repository</code>，名字命名为以下格式：</p>
 <p><code>&quot;yourGithubName&quot;.github.io</code></p>
 <p>设置为公共仓库，其他设置默认即可。</p>
 <h2 id="在本地配置git"><a href="#在本地配置git" class="headerlink" title="在本地配置git"></a><strong>在本地配置git</strong></h2><p>在本地安装好 git 工具，在 macOS 上的安装方法为在终端输入以下命令：</p>
@@ -229,13 +229,13 @@ $ npm install -g hexo
 <pre><code>$ ssh-keyget -t rsa -C &quot;yourMailAddress&quot; </code></pre>
 
 <p>执行后按四次回车，不用输入任何命令。</p>
-<p>在用户根目录下显示隐藏文件，找到 .ssh 文件，打开 id_rsa.pub，复制其内容至剪切板。</p>
+<p>在用户根目录下显示隐藏文件，找到 <code>.ssh</code> 文件，打开 <code>id_rsa.pub</code>，复制其内容至剪切板。</p>
 <blockquote>
 <p>macOS 下显示隐藏文件方法为 shift + command + 。</p>
 </blockquote>
-<h3 id="2-设置-GitHub-SSH-Keys"><a href="#2-设置-GitHub-SSH-Keys" class="headerlink" title="2. 设置 GitHub SSH Keys"></a><strong>2. 设置 GitHub SSH Keys</strong></h3><p>打开 GitHub 网站，进入 Setting，选择 SSH and GPG keys 选项卡。</p>
-<p>在 Title 中输入你想要的称呼，讲剪切板中的内容复制到 key 中。</p>
-<p>点击 Add SSH key 按钮。</p>
+<h3 id="2-设置-GitHub-SSH-Keys"><a href="#2-设置-GitHub-SSH-Keys" class="headerlink" title="2. 设置 GitHub SSH Keys"></a><strong>2. 设置 GitHub SSH Keys</strong></h3><p>打开 GitHub 网站，进入 <code>Setting</code>，选择 <code>SSH and GPG keys</code> 选项卡。</p>
+<p>在 <code>Title</code> 中输入你想要的称呼，将剪切板中的内容复制到 <code>key</code> 中。</p>
+<p>点击 <code>Add SSH key</code> 按钮。</p>
 <p>回到终端，在终端中输入以下命令：</p>
 <pre><code>$ ssh -T git@github.com </code></pre>
 
@@ -264,14 +264,14 @@ $ npm install -g hexo
 <p>在终端输入以下命令可以在本地服务器进行预览：</p>
 <pre><code>$ npx hexo s </code></pre>
 
-<p>打开浏览器，输入 localhost:4000 即可看到博客的预览。</p>
+<p>打开浏览器，输入 <code>localhost:4000</code> 即可看到博客的预览。</p>
 <blockquote>
 <p>如果 hexo s 命令有以下报错：</p>
 <pre><code>TypeError: Cannot read property &#39;utcOffset&#39; of null</code></pre>
 
-<p>说明你和笔者一样手欠，在 _config.yml 文件中将时区 timezone 改成了什么乱七八糟的地方。重新改成 Asia/Shanghai 就解决了。</p>
+<p>说明你和笔者一样手欠，在 <code>_config.yml</code> 文件中将时区 <code>timezone</code> 改成了什么乱七八糟的地方。重新改成<code> Asia/Shanghai</code> 就解决了。</p>
 </blockquote>
-<h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a><strong>修改配置文件</strong></h2><p>打开 _config.yml 文件，在最后添加以下内容：</p>
+<h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a><strong>修改配置文件</strong></h2><p>打开 <code>_config.yml</code> 文件，在最后添加以下内容：</p>
 <pre><code>deploy:
 
 ​    type: git
@@ -288,8 +288,8 @@ $ npm install -g hexo
 <p>这里你可以自己捣鼓一下，找一个现成的主题或者自己写一个主题。具体的美化工作就看你的想法了。hexo 的一系列操作可以参考 hexo 的<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">官方文档</a>。</p>
 </blockquote>
 <hr>
-<h1 id="部署-GitHub-pages"><a href="#部署-GitHub-pages" class="headerlink" title="部署 GitHub pages"></a><strong>部署 GitHub pages</strong></h1><h2 id="在-GitHub-上申请令牌"><a href="#在-GitHub-上申请令牌" class="headerlink" title="在 GitHub 上申请令牌"></a><strong>在 GitHub 上申请令牌</strong></h2><p>打开 GitHub 上的 Setting，选择 Developer settings 选项卡，然后选择 Personnal access tokens 选项卡。</p>
-<p>点击 Generate new token 按钮，输入密码。</p>
+<h1 id="部署-GitHub-pages"><a href="#部署-GitHub-pages" class="headerlink" title="部署 GitHub pages"></a><strong>部署 GitHub pages</strong></h1><h2 id="在-GitHub-上申请令牌"><a href="#在-GitHub-上申请令牌" class="headerlink" title="在 GitHub 上申请令牌"></a><strong>在 GitHub 上申请令牌</strong></h2><p>打开 GitHub 上的 <code>Settings</code>，选择 <code>Developer settings</code> 选项卡，然后选择 <code>Personnal access tokens</code> 选项卡。</p>
+<p>点击 <code>Generate new token</code> 按钮，输入密码。</p>
 <p>在新建令牌页面中选择所有的权限（其实不用全选，但是笔者懒得挑了）。</p>
 <p>点击生成令牌，在接下来的页面中截图或者复制得到的令牌，令牌只会出现一次，一定要记住。</p>
 <h2 id="将博客部署到-GitHub-上"><a href="#将博客部署到-GitHub-上" class="headerlink" title="将博客部署到 GitHub 上"></a><strong>将博客部署到 GitHub 上</strong></h2><p>在存有本地页面的文件夹中打开终端，输入以下命令：</p>
@@ -301,7 +301,7 @@ $ npx hexo d </code></pre>
 <blockquote>
 <p>这里经常会失败，GitHub 的网站在国内还是8太行</p>
 </blockquote>
-<p>成功之后，我们所有的工作就基本完成了，打开博客的仓库，点击 Settings，找到 Pages 选项卡，点击确认，博客就在 GitHub 上成功发布了。博客的网址就是仓库的名称，即<code>https://“yourGithubName&quot;.github.io</code>。</p>
+<p>成功之后，我们所有的工作就基本完成了，打开博客的仓库，点击 <code>Settings</code>，找到 <code>Pages</code> 选项卡，点击确认，博客就在 GitHub 上成功发布了。博客的网址就是仓库的名称，即<code>https://“yourGithubName&quot;.github.io</code>。</p>
 <hr>
 <h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a><strong>最后</strong></h1><p>写到这里这篇文章也就结束了，笔者只是记录一下自己搭建个人博客的一个过程，以后也会在这个博客上继续分享个人的学习经历。如果你感兴趣的话，欢迎持续关注。</p>
 
