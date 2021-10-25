@@ -21,7 +21,7 @@
 <p>也有其他的方式来安装 git，可以去百度上探索一下。</p>
 <h2 id="在本地安装-Node-js"><a href="#在本地安装-Node-js" class="headerlink" title="在本地安装 Node.js"></a><strong>在本地安装 Node.js</strong></h2><p>Node.js 为 macOS 提供了官方的安装程序，在 Node.js 的<a href="http://nodejs.cn/download">官网下载页面</a>上即可下载。</p>
 <h2 id="在本地安装-hexo"><a href="#在本地安装-hexo" class="headerlink" title="在本地安装 hexo"></a>在本地安装 hexo</h2><p>打开终端，输入以下命令：</p>
-<pre><code>$ npm install -g hex-cli </code></pre>
+<pre><code>$ npm install -g hexo-cli </code></pre>
 
 <p>安装好后，可以用以下命令执行hexo</p>
 <pre><code>$ npx hexo &lt;command&gt; </code></pre>
