@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Github pages + hexo 搭建个人博客 | FruiteePro</title>
+    <title>GitHub Pages + hexo 搭建个人博客 | FruiteePro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     
@@ -20,7 +20,7 @@
     
 
     
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥵</text></svg>">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖥</text></svg>">
     
 
     
@@ -124,7 +124,7 @@
             <section class="inner">
                 <section class="inner-main">
                     <div class="post">
-    <article id="post-ckv6dfyra00007n5qargt2lk0" class="article article-type-post" itemscope
+    <article id="post-ckv6em69p0000tc5q577kbsat" class="article article-type-post" itemscope
     itemprop="blogPost">
 
     <div class="article-inner">
@@ -140,7 +140,7 @@
             
   
     <h1 class="article-title" itemprop="name">
-      Github pages + hexo 搭建个人博客
+      GitHub Pages + hexo 搭建个人博客
     </h1>
   
 
@@ -161,7 +161,7 @@
 
             
             <div class="article-tag">
-                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github-pages/" rel="tag">Github pages</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li></ul>
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub-Pages/" rel="tag">GitHub_Pages</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li></ul>
             </div>
             
 
@@ -224,7 +224,7 @@ $ npm install -g hexo
 
 
 
-<h2 id="Github-的一系列设置"><a href="#Github-的一系列设置" class="headerlink" title="Github 的一系列设置"></a><strong>Github 的一系列设置</strong></h2><h3 id="1-生成-ssh-key"><a href="#1-生成-ssh-key" class="headerlink" title="1. 生成 ssh key"></a><strong>1. 生成 ssh key</strong></h3><p>macOS 是自带 ssh 的，因此不用安装。在此只要生成本机的 ssh key 即可。</p>
+<h2 id="GitHub-的一系列设置"><a href="#GitHub-的一系列设置" class="headerlink" title="GitHub 的一系列设置"></a><strong>GitHub 的一系列设置</strong></h2><h3 id="1-生成-ssh-key"><a href="#1-生成-ssh-key" class="headerlink" title="1. 生成 ssh key"></a><strong>1. 生成 ssh key</strong></h3><p>macOS 是自带 ssh 的，因此不用安装。在此只要生成本机的 ssh key 即可。</p>
 <p>打开终端，输入以下命令：</p>
 <pre><code>$ ssh-keyget -t rsa -C &quot;yourMailAddress&quot; </code></pre>
 
@@ -233,7 +233,7 @@ $ npm install -g hexo
 <blockquote>
 <p>macOS 下显示隐藏文件方法为 shift + command + 。</p>
 </blockquote>
-<h3 id="2-设置-Github-SSH-Keys"><a href="#2-设置-Github-SSH-Keys" class="headerlink" title="2. 设置 Github SSH Keys"></a><strong>2. 设置 Github SSH Keys</strong></h3><p>打开 GitHub 网站，进入 Setting，选择 SSH and GPG keys 选项卡。</p>
+<h3 id="2-设置-GitHub-SSH-Keys"><a href="#2-设置-GitHub-SSH-Keys" class="headerlink" title="2. 设置 GitHub SSH Keys"></a><strong>2. 设置 GitHub SSH Keys</strong></h3><p>打开 GitHub 网站，进入 Setting，选择 SSH and GPG keys 选项卡。</p>
 <p>在 Title 中输入你想要的称呼，讲剪切板中的内容复制到 key 中。</p>
 <p>点击 Add SSH key 按钮。</p>
 <p>回到终端，在终端中输入以下命令：</p>
@@ -265,27 +265,45 @@ $ npm install -g hexo
 <pre><code>$ npx hexo s </code></pre>
 
 <p>打开浏览器，输入 localhost:4000 即可看到博客的预览。</p>
+<blockquote>
+<p>如果 hexo s 命令有以下报错：</p>
+<pre><code>TypeError: Cannot read property &#39;utcOffset&#39; of null</code></pre>
+
+<p>说明你和笔者一样手欠，在 _config.yml 文件中将时区 timezone 改成了什么乱七八糟的地方。重新改成 Asia/Shanghai 就解决了。</p>
+</blockquote>
 <h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a><strong>修改配置文件</strong></h2><p>打开 _config.yml 文件，在最后添加以下内容：</p>
 <pre><code>deploy:
 
 ​    type: git
 
-​    repostory: https:&#x2F;&#x2F;github.com&#x2F;&quot;yourGithubName&quot;&#x2F;&quot;yourGithubName&quot;.github.io.git
+​    repo: https:&#x2F;&#x2F;github.com&#x2F;&quot;yourGithubName&quot;&#x2F;&quot;yourGithubName&quot;.github.io.git
 
 ​    branch: main </code></pre>
 
+<blockquote>
+<p>这里注意一定缩进要打满4个空格，英文冒号后面也要跟一个空格</p>
+</blockquote>
 <p>修改完毕后保存。</p>
+<blockquote>
+<p>这里你可以自己捣鼓一下，找一个现成的主题或者自己写一个主题。具体的美化工作就看你的想法了。hexo 的一系列操作可以参考 hexo 的<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">官方文档</a>。</p>
+</blockquote>
 <hr>
 <h1 id="部署-GitHub-pages"><a href="#部署-GitHub-pages" class="headerlink" title="部署 GitHub pages"></a><strong>部署 GitHub pages</strong></h1><h2 id="在-GitHub-上申请令牌"><a href="#在-GitHub-上申请令牌" class="headerlink" title="在 GitHub 上申请令牌"></a><strong>在 GitHub 上申请令牌</strong></h2><p>打开 GitHub 上的 Setting，选择 Developer settings 选项卡，然后选择 Personnal access tokens 选项卡。</p>
 <p>点击 Generate new token 按钮，输入密码。</p>
 <p>在新建令牌页面中选择所有的权限（其实不用全选，但是笔者懒得挑了）。</p>
 <p>点击生成令牌，在接下来的页面中截图或者复制得到的令牌，令牌只会出现一次，一定要记住。</p>
-<h2 id="将博客部署到-GitHub-上"><a href="#将博客部署到-GitHub-上" class="headerlink" title="将博客部署到 GitHub 上"></a>将博客部署到 GitHub 上</h2><p>在存有本地页面的文件夹中打开终端，输入以下命令：</p>
+<h2 id="将博客部署到-GitHub-上"><a href="#将博客部署到-GitHub-上" class="headerlink" title="将博客部署到 GitHub 上"></a><strong>将博客部署到 GitHub 上</strong></h2><p>在存有本地页面的文件夹中打开终端，输入以下命令：</p>
 <pre><code>$ npx hexo g
 
 $ npx hexo d </code></pre>
 
 <p>依次输入 GitHub 的用户名和申请的令牌。</p>
+<blockquote>
+<p>这里经常会失败，GitHub 的网站在国内还是8太行</p>
+</blockquote>
+<p>成功之后，我们所有的工作就基本完成了，打开博客的仓库，点击 Settings，找到 Pages 选项卡，点击确认，博客就在 GitHub 上成功发布了。博客的网址就是仓库的名称，即<code>https://“yourGithubName&quot;.github.io</code>。</p>
+<hr>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a><strong>最后</strong></h1><p>写到这里这篇文章也就结束了，笔者只是记录一下自己搭建个人博客的一个过程，以后也会在这个博客上继续分享个人的学习经历。如果你感兴趣的话，欢迎持续关注。</p>
 
         </div>
 
@@ -308,29 +326,19 @@ $ npx hexo d </code></pre>
     
 
     
-<nav class="article-nav">
-  
-  
-    <a href="/2021/10/25/testone/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-caption">上一篇</div>
-      <div class="article-nav-title">测试</div>
-    </a>
-  
-</nav>
-
 
     <section class="share">
         <div class="share-title">分享</div>
         <a class="share-item" target="_blank"
-            href="https://twitter.com/share?text=Github pages + hexo 搭建个人博客 - FruiteePro&url=http://example.com/2021/10/25/2021-10-25-1/">
+            href="https://twitter.com/share?text=GitHub Pages + hexo 搭建个人博客 - FruiteePro&url=http://example.com/2021/10/25/2021-10-25-1/">
             <box-icon type='logo' name='twitter'></box-icon>
         </a>
         <a class="share-item" target="_blank"
-            href="https://www.facebook.com/sharer.php?title=Github pages + hexo 搭建个人博客 - FruiteePro&u=http://example.com/2021/10/25/2021-10-25-1/">
+            href="https://www.facebook.com/sharer.php?title=GitHub Pages + hexo 搭建个人博客 - FruiteePro&u=http://example.com/2021/10/25/2021-10-25-1/">
             <box-icon name='facebook-square' type='logo' ></box-icon>
         </a>
         <!-- <a class="share-item" target="_blank"
-            href="https://service.weibo.com/share/share.php?title=Github pages + hexo 搭建个人博客 - FruiteePro&url=http://example.com/2021/10/25/2021-10-25-1/&pic=">
+            href="https://service.weibo.com/share/share.php?title=GitHub Pages + hexo 搭建个人博客 - FruiteePro&url=http://example.com/2021/10/25/2021-10-25-1/&pic=">
             <div class="n-icon n-icon-weibo"></div>
         </a> -->
     </section>
@@ -391,7 +399,7 @@ $ npx hexo d </code></pre>
   <div class="widget-wrap widget-tags">
     <div class="widget-title"><span>Tags</span></div>
     <div class="widget-inner">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github-pages/" rel="tag">Github pages</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub-Pages/" rel="tag">GitHub_Pages</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li></ul>
     </div>
   </div>
 
@@ -404,15 +412,7 @@ $ npx hexo d </code></pre>
       <ul>
         
           <li>
-            <a href="/2021/10/25/2021-10-25-1/">Github pages + hexo 搭建个人博客</a>
-          </li>
-        
-          <li>
-            <a href="/2021/10/25/testone/">测试</a>
-          </li>
-        
-          <li>
-            <a href="/2021/10/24/hello-world/">Hello World</a>
+            <a href="/2021/10/25/2021-10-25-1/">GitHub Pages + hexo 搭建个人博客</a>
           </li>
         
       </ul>
