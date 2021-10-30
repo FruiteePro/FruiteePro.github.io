@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Category | 教程 | FruiteePro</title>
+    <title>M1 Mac 安装 Java | FruiteePro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     
@@ -36,7 +36,7 @@
 
 
     <script>
-        window.isPost = false
+        window.isPost = true
         window.aomori = {
             
             
@@ -123,47 +123,148 @@
         <div class="main">
             <section class="inner">
                 <section class="inner-main">
-                    <section class="archives-cover"></section>
+                    <div class="post">
+    <article id="post-ckvdl4yys0001kf5q1kzv2h76" class="article article-type-post" itemscope
+    itemprop="blogPost">
 
+    <div class="article-inner">
 
-    
-    
-    
-    
-    <section class="archives-wrap">
-        <div class="archive-year-wrap">
-        <a href="/archives/2021" class="archive-year">2021</a>
+        
+          
+        
+        
+        
+
+        
+        <header class="article-header">
+            
+  
+    <h1 class="article-title" itemprop="name">
+      M1 Mac 安装 Java
+    </h1>
+  
+
+        </header>
+        
+
+        <div class="article-more-info article-more-info-post hairline">
+
+            <div class="article-date">
+  <time datetime="2021-10-30T08:36:47.000Z" itemprop="datePublished">2021-10-30</time>
+</div>
+
+            
+            <div class="article-category">
+                <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
+            </div>
+            
+
+            
+            <div class="article-tag">
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li></ul>
+            </div>
+            
+
+            
+
         </div>
-        <div class="archives">
+
+        <div class="article-entry post-inner-html hairline" itemprop="articleBody">
+            <p>最近要重新用一下 Java ，本来电脑里是有一个的，奈何发现 javac 用不了了，查了一下也没搞清楚为啥，总之直接重装了一个，正好换了个版本。为了防止下次再出现类似于忘了去哪找安装包的事情，笔者决定还是写下来，毕竟好记性不如烂笔头（也许应该说好记性不如烂键盘？）。</p>
+<span id="more"></span>
+
+<hr>
+<h1 id="卸载已有-JDK"><a href="#卸载已有-JDK" class="headerlink" title="卸载已有 JDK"></a><strong>卸载已有 JDK</strong></h1><p>众所周知，Mac 环境里是可以安装多个 JDK 的。</p>
+<p>打开终端，输入以下命令：</p>
+<pre><code>ls &#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;</code></pre>
+
+<p>然后就可以看见电脑上安装的 JDK 版本。</p>
+<p>卸载 JDK 就很简单，在终端继续输入命令：</p>
+<pre><code>sudo rm -rf &#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;jdk1.7.0_79.jdk
+
+&#x2F;&#x2F;最后 JDK 名字替换成刚才找到的，这里是个例子</code></pre>
+
+<p>继续输入密码，即可成功删除。</p>
+<p>可以在终端输入指令 <code>java -version</code> 来检查是否成功卸载。</p>
+<h1 id="安装新的-JDK"><a href="#安装新的-JDK" class="headerlink" title="安装新的 JDK"></a><strong>安装新的 JDK</strong></h1><p>目前支持 <code>M1</code> 芯片 有 <code>Zulu JDK</code> ，<a target="_blank" rel="noopener" href="https://www.azul.com/downloads/?version=java-11-lts&os=macos&architecture=arm-64-bit&package=jdk">下载网址</a>。</p>
+<p>在网页中点击 <code>Choose Your Download</code> ，进入下个页面，选择你希望有的配置。下个 <code>dmg</code> 版本就挺好的。</p>
+<p>下载好后安装，走完步骤。</p>
+<p>检查是否安装成功的方法和检查是否删除成功的一样，在终端输入指令 <code>java -version</code> 即可。</p>
+<pre><code>$ java -version
+
+openjdk version &quot;11.0.13&quot; 2021-10-19 LTS
+
+OpenJDK Runtime Environment Zulu11.52+13-CA (build 11.0.13+8-LTS)
+
+OpenJDK 64-Bit Server VM Zulu11.52+13-CA (build 11.0.13+8-LTS, mixed mode)</code></pre>
+
+<p>这就算成功了。</p>
+<p><code>Zulu JDK</code> 默认安装在 <code>/Library/Java/JavaVirtualMachines</code> 目录下。</p>
+<hr>
+<p>到这差不多也就完事了，现在能用了。</p>
+
+        </div>
+
+    </div>
+
     
-    <article class="archive-article archive-type-post">
+
+    
+
+    
+
+    
+<div class="article-copyright hairline">
+  <p>
+    本作品采用 <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a> 进行许可。
+  </p>
+</div>
+
+
+    
+
+    
+<nav class="article-nav">
   
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/10/30/2021-10-30-1/">M1 Mac 安装 Java</a>
-    </h1>
+    <a href="/2021/10/25/2021-10-25-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-caption">上一篇</div>
+      <div class="article-nav-title">GitHub_Pages + hexo 搭建个人博客</div>
+    </a>
   
+</nav>
+
+
+    <section class="share">
+        <div class="share-title">分享</div>
+        <a class="share-item" target="_blank"
+            href="https://twitter.com/share?text=M1 Mac 安装 Java - FruiteePro&url=http://example.com/2021/10/30/2021-10-30-1/">
+            <box-icon type='logo' name='twitter'></box-icon>
+        </a>
+        <a class="share-item" target="_blank"
+            href="https://www.facebook.com/sharer.php?title=M1 Mac 安装 Java - FruiteePro&u=http://example.com/2021/10/30/2021-10-30-1/">
+            <box-icon name='facebook-square' type='logo' ></box-icon>
+        </a>
+        <!-- <a class="share-item" target="_blank"
+            href="https://service.weibo.com/share/share.php?title=M1 Mac 安装 Java - FruiteePro&url=http://example.com/2021/10/30/2021-10-30-1/&pic=">
+            <div class="n-icon n-icon-weibo"></div>
+        </a> -->
+    </section>
 
 </article>
 
-    
-    
-    <article class="archive-article archive-type-post">
-  
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/10/25/2021-10-25-1/">GitHub_Pages + hexo 搭建个人博客</a>
-    </h1>
-  
-
-</article>
-
-
-    </div></section>
 
 
 
 
+
+
+
+
+
+
+
+</div>
                 </section>
             </section>
 
@@ -185,6 +286,12 @@
 <div class="widget" id="widget">
     
       
+  <div class="widget-wrap">
+    <div class="widget-inner">
+      <div class="toc post-toc-html"></div>
+    </div>
+  </div>
+
     
       
   <div class="widget-wrap widget-cate">

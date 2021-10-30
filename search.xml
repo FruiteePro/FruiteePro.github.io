@@ -147,4 +147,48 @@ $ npx hexo d </code></pre>
         <tag>macOS</tag>
       </tags>
   </entry>
+  <entry>
+    <title>M1 Mac 安装 Java</title>
+    <url>/2021/10/30/2021-10-30-1/</url>
+    <content><![CDATA[<p>最近要重新用一下 Java ，本来电脑里是有一个的，奈何发现 javac 用不了了，查了一下也没搞清楚为啥，总之直接重装了一个，正好换了个版本。为了防止下次再出现类似于忘了去哪找安装包的事情，笔者决定还是写下来，毕竟好记性不如烂笔头（也许应该说好记性不如烂键盘？）。</p>
+<span id="more"></span>
+
+<hr>
+<h1 id="卸载已有-JDK"><a href="#卸载已有-JDK" class="headerlink" title="卸载已有 JDK"></a><strong>卸载已有 JDK</strong></h1><p>众所周知，Mac 环境里是可以安装多个 JDK 的。</p>
+<p>打开终端，输入以下命令：</p>
+<pre><code>ls &#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;</code></pre>
+
+<p>然后就可以看见电脑上安装的 JDK 版本。</p>
+<p>卸载 JDK 就很简单，在终端继续输入命令：</p>
+<pre><code>sudo rm -rf &#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;jdk1.7.0_79.jdk
+
+&#x2F;&#x2F;最后 JDK 名字替换成刚才找到的，这里是个例子</code></pre>
+
+<p>继续输入密码，即可成功删除。</p>
+<p>可以在终端输入指令 <code>java -version</code> 来检查是否成功卸载。</p>
+<h1 id="安装新的-JDK"><a href="#安装新的-JDK" class="headerlink" title="安装新的 JDK"></a><strong>安装新的 JDK</strong></h1><p>目前支持 <code>M1</code> 芯片 有 <code>Zulu JDK</code> ，<a href="https://www.azul.com/downloads/?version=java-11-lts&os=macos&architecture=arm-64-bit&package=jdk">下载网址</a>。</p>
+<p>在网页中点击 <code>Choose Your Download</code> ，进入下个页面，选择你希望有的配置。下个 <code>dmg</code> 版本就挺好的。</p>
+<p>下载好后安装，走完步骤。</p>
+<p>检查是否安装成功的方法和检查是否删除成功的一样，在终端输入指令 <code>java -version</code> 即可。</p>
+<pre><code>$ java -version
+
+openjdk version &quot;11.0.13&quot; 2021-10-19 LTS
+
+OpenJDK Runtime Environment Zulu11.52+13-CA (build 11.0.13+8-LTS)
+
+OpenJDK 64-Bit Server VM Zulu11.52+13-CA (build 11.0.13+8-LTS, mixed mode)</code></pre>
+
+<p>这就算成功了。</p>
+<p><code>Zulu JDK</code> 默认安装在 <code>/Library/Java/JavaVirtualMachines</code> 目录下。</p>
+<hr>
+<p>到这差不多也就完事了，现在能用了。</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>macOS</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
 </search>
