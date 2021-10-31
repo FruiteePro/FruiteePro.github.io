@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     
-    <title>M1 Mac 安装 Java | FruiteePro</title>
+    <title>踩坑日记 | algs4.jar 包的配置 | FruiteePro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     
@@ -124,7 +124,7 @@
             <section class="inner">
                 <section class="inner-main">
                     <div class="post">
-    <article id="post-ckvdl4yys0001kf5q1kzv2h76" class="article article-type-post" itemscope
+    <article id="post-ckven9p3000000e5q26vd5g4w" class="article article-type-post" itemscope
     itemprop="blogPost">
 
     <div class="article-inner">
@@ -140,7 +140,7 @@
             
   
     <h1 class="article-title" itemprop="name">
-      M1 Mac 安装 Java
+      踩坑日记 | algs4.jar 包的配置
     </h1>
   
 
@@ -150,18 +150,18 @@
         <div class="article-more-info article-more-info-post hairline">
 
             <div class="article-date">
-  <time datetime="2021-10-30T08:36:47.000Z" itemprop="datePublished">2021-10-30</time>
+  <time datetime="2021-10-31T01:48:28.000Z" itemprop="datePublished">2021-10-31</time>
 </div>
 
             
             <div class="article-category">
-                <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
+                <a class="article-category-link" href="/categories/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/">踩坑日记</a>
             </div>
             
 
             
             <div class="article-tag">
-                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li></ul>
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zsh/" rel="tag">zsh</a></li></ul>
             </div>
             
 
@@ -170,38 +170,76 @@
         </div>
 
         <div class="article-entry post-inner-html hairline" itemprop="articleBody">
-            <p>最近要重新用一下 Java ，本来电脑里是有一个的，奈何发现 javac 用不了了，查了一下也没搞清楚为啥，总之直接重装了一个，正好换了个版本。为了防止下次再出现类似于忘了去哪找安装包的事情，笔者决定还是写下来，毕竟好记性不如烂笔头（也许应该说好记性不如烂键盘？）。</p>
+            <p>笔者最近在看 <code>Algorithms (Fourth Edition)</code> 这本书，想做一下练习，于是开始配这本书写的环境。这书的练习都是 <code>Java</code> 写的，需要调用一些作者自己写的类。作者在官网上给出了已经包括全部类的 <code>jar</code> 包，然而笔者发现导入之后并不能用，一直报错，属实折磨，在网上找到的资料也并不能解决笔者遇到的问题。最后还是参考作者在网站上写的内容稍加修改解决了。</p>
 <span id="more"></span>
 
 <hr>
-<h1 id="卸载已有-JDK"><a href="#卸载已有-JDK" class="headerlink" title="卸载已有 JDK"></a><strong>卸载已有 JDK</strong></h1><p>众所周知，Mac 环境里是可以安装多个 JDK 的。</p>
-<p>打开终端，输入以下命令：</p>
-<pre><code>ls &#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;</code></pre>
+<h1 id="下载-algs4-jar"><a href="#下载-algs4-jar" class="headerlink" title="下载 algs4.jar"></a><strong>下载 algs4.jar</strong></h1><p>访问 <code>Algorithms</code> 这本书的<a target="_blank" rel="noopener" href="https://algs4.cs.princeton.edu/home/">官网</a>，在左侧的导航栏选择 Code 页面。</p>
+<p>一直下滑，直到找到高亮的 <code>algs4.jar</code> ，点击超链接即可下载。</p>
+<p>下载好后要将得到的 <code>algs4.jar</code> 放在指定目录下，官网给出的目录为：</p>
+<pre><code>&#x2F;usr&#x2F;local&#x2F;lift&#x2F;lib&#x2F;algs4.jar</code></pre>
 
-<p>然后就可以看见电脑上安装的 JDK 版本。</p>
-<p>卸载 JDK 就很简单，在终端继续输入命令：</p>
-<pre><code>sudo rm -rf &#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;jdk1.7.0_79.jdk
+<p>这个是使用作者提供的自动安装工具下载的目录。考虑到境外网站一向不稳定，笔者并没有安装和使用这个工具。</p>
+<p>笔者下载完毕 <code>algs.jar</code> 后，将其放在的目录为：</p>
+<pre><code>&#x2F;&quot;Users&#x2F;yourUserName&quot;&#x2F;Library&#x2F;Java&#x2F;Extensions&#x2F;algs4.jar</code></pre>
 
-&#x2F;&#x2F;最后 JDK 名字替换成刚才找到的，这里是个例子</code></pre>
+<p>没有文件夹的其实可以新建一个。</p>
+<h1 id="配置-IDEA-环境"><a href="#配置-IDEA-环境" class="headerlink" title="配置 IDEA 环境"></a><strong>配置 IDEA 环境</strong></h1><p>打开 IDEA，新建一个项目。笔者这里新建的项目中的文件为 <code>Test.java</code> 。</p>
+<p>点击顶部的 <code>File</code> 选项卡，在下拉菜单中点击 <code>Project Structure</code> 。</p>
+<p>点击 <code>Library</code> 选项卡，选择加号，<code>New Project Library</code> 。在目录中找到 <code>algs4.jar</code> 并选中，添加成功后选择 <code>Apply</code> 和 <code>OK</code> 确认。</p>
+<p>在右上角调整好正确的 <code>Run/Debug Configuration</code> 。此时在 <code>Test.java</code> 中写入以下代码：</p>
+<pre><code>import edu.princeton.cs.algs4.*;</code></pre>
 
-<p>继续输入密码，即可成功删除。</p>
-<p>可以在终端输入指令 <code>java -version</code> 来检查是否成功卸载。</p>
-<h1 id="安装新的-JDK"><a href="#安装新的-JDK" class="headerlink" title="安装新的 JDK"></a><strong>安装新的 JDK</strong></h1><p>目前支持 <code>M1</code> 芯片 有 <code>Zulu JDK</code> ，<a target="_blank" rel="noopener" href="https://www.azul.com/downloads/?version=java-11-lts&os=macos&architecture=arm-64-bit&package=jdk">下载网址</a>。</p>
-<p>在网页中点击 <code>Choose Your Download</code> ，进入下个页面，选择你希望有的配置。下个 <code>dmg</code> 版本就挺好的。</p>
-<p>下载好后安装，走完步骤。</p>
-<p>检查是否安装成功的方法和检查是否删除成功的一样，在终端输入指令 <code>java -version</code> 即可。</p>
-<pre><code>$ java -version
+<p>如果没有报错，即配置成功。</p>
+<p>但是到这里程序依然是无法运行的，因为我们需要在命令行对程序进行编译和运行。如果此时直接在命令行输入 <code>javac Test.java</code> 进行编译，会有以下报错：</p>
+<pre><code>import edu.princeton.cs.algs4.*;
+^
+Test.java:6: 错误: 找不到符号
+        Point2D[] ps &#x3D; new Point2D[N];
+        ^
+  符号:   类 Point2D
+  位置: 类 Test
+Test.java:6: 错误: 找不到符号
+        Point2D[] ps &#x3D; new Point2D[N];
+                           ^
+  符号:   类 Point2D
+  位置: 类 Test
+Test.java:9: 错误: 找不到符号
+            double x &#x3D; StdRandom.uniform();
+                       ^
+  符号:   变量 StdRandom
+  位置: 类 Test
+Test.java:10: 错误: 找不到符号
+            double y &#x3D; StdRandom.uniform();
+                       ^
+  符号:   变量 StdRandom
+  位置: 类 Test
+Test.java:11: 错误: 找不到符号
+            ps[i] &#x3D; new Point2D(x, y);
+                        ^
+  符号:   类 Point2D
+  位置: 类 Test
+6 个错误</code></pre>
 
-openjdk version &quot;11.0.13&quot; 2021-10-19 LTS
+<p>所以需要继续配置 <code>zsh</code> 。</p>
+<h1 id="配置-zsh-环境变量"><a href="#配置-zsh-环境变量" class="headerlink" title="配置 zsh 环境变量"></a><strong>配置 zsh 环境变量</strong></h1><p>其实这里可以不配置环境变量，不过每次命令行编译都需要输入以下一大长串。</p>
+<pre><code>$ javac -cp .:&#x2F;Users&#x2F;&quot;yourUserName&quot;&#x2F;Library&#x2F;Java&#x2F;Extensions&#x2F;algs4.jar Test.java
 
-OpenJDK Runtime Environment Zulu11.52+13-CA (build 11.0.13+8-LTS)
+$ java -cp .:&#x2F;Users&#x2F;&quot;yourUserName&quot;&#x2F;Library&#x2F;Java&#x2F;Extensions&#x2F;algs4.jar Test</code></pre>
 
-OpenJDK 64-Bit Server VM Zulu11.52+13-CA (build 11.0.13+8-LTS, mixed mode)</code></pre>
+<p>这可真是太不方便了。虽然可以自己写个脚本，但还是很麻烦。根据作者官网的说明，可以配置一下环境变量，然而作者写的说明并不包括 <code>zsh</code> 的配置。所以这里笔者给出 <code>zsh</code> 的配置说明。</p>
+<p>将以下代码加入到文件 <code>~/.zshrc</code> 中（如果没有就自己建一个）。</p>
+<pre><code>export CLASSPATH&#x3D;$CLASSPATH:&#x2F;Users&#x2F;&quot;yourUserName&quot;&#x2F;Library&#x2F;Java&#x2F;Extensions&#x2F;algs4.jar</code></pre>
 
-<p>这就算成功了。</p>
-<p><code>Zulu JDK</code> 默认安装在 <code>/Library/Java/JavaVirtualMachines</code> 目录下。</p>
-<hr>
-<p>到这差不多也就完事了，现在能用了。</p>
+<blockquote>
+<p>这里的 <code>algs.jar</code> 的路径要写对。如果你一直按照我的说明来，那就是这个路径。如果你有自己的想法，那写你自己的路径。</p>
+</blockquote>
+<p>配置完成后，在 <code>Test.java</code> 文件目录中打开终端，输入以下命令：</p>
+<pre><code>$ javac Test.java
+
+$ java Test</code></pre>
+
+<p>如果没有报错，成功运行，那么恭喜你，配置完成。</p>
 
         </div>
 
@@ -226,19 +264,10 @@ OpenJDK 64-Bit Server VM Zulu11.52+13-CA (build 11.0.13+8-LTS, mixed mode)</code
     
 <nav class="article-nav">
   
-    <a href="/2021/10/31/2021-10-31-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <div class="article-nav-caption">下一篇</div>
-      <div class="article-nav-title">
-        
-          踩坑日记 | algs4.jar 包的配置
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/10/25/2021-10-25-1/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/10/30/2021-10-30-1/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-caption">上一篇</div>
-      <div class="article-nav-title">GitHub_Pages + hexo 搭建个人博客</div>
+      <div class="article-nav-title">M1 Mac 安装 Java</div>
     </a>
   
 </nav>
@@ -247,15 +276,15 @@ OpenJDK 64-Bit Server VM Zulu11.52+13-CA (build 11.0.13+8-LTS, mixed mode)</code
     <section class="share">
         <div class="share-title">分享</div>
         <a class="share-item" target="_blank"
-            href="https://twitter.com/share?text=M1 Mac 安装 Java - FruiteePro&url=http://example.com/2021/10/30/2021-10-30-1/">
+            href="https://twitter.com/share?text=踩坑日记 | algs4.jar 包的配置 - FruiteePro&url=http://example.com/2021/10/31/2021-10-31-1/">
             <box-icon type='logo' name='twitter'></box-icon>
         </a>
         <a class="share-item" target="_blank"
-            href="https://www.facebook.com/sharer.php?title=M1 Mac 安装 Java - FruiteePro&u=http://example.com/2021/10/30/2021-10-30-1/">
+            href="https://www.facebook.com/sharer.php?title=踩坑日记 | algs4.jar 包的配置 - FruiteePro&u=http://example.com/2021/10/31/2021-10-31-1/">
             <box-icon name='facebook-square' type='logo' ></box-icon>
         </a>
         <!-- <a class="share-item" target="_blank"
-            href="https://service.weibo.com/share/share.php?title=M1 Mac 安装 Java - FruiteePro&url=http://example.com/2021/10/30/2021-10-30-1/&pic=">
+            href="https://service.weibo.com/share/share.php?title=踩坑日记 | algs4.jar 包的配置 - FruiteePro&url=http://example.com/2021/10/31/2021-10-31-1/&pic=">
             <div class="n-icon n-icon-weibo"></div>
         </a> -->
     </section>
