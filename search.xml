@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Dockerfile 搭建使用 GPU 的 tensorflow 环境</title>
+      <link href="/2023/04/12/Dockerfile%20%E6%90%AD%E5%BB%BA%E4%BD%BF%E7%94%A8%20GPU%20%E7%9A%84%20tensorflow%20%E7%8E%AF%E5%A2%83/"/>
+      <url>/2023/04/12/Dockerfile%20%E6%90%AD%E5%BB%BA%E4%BD%BF%E7%94%A8%20GPU%20%E7%9A%84%20tensorflow%20%E7%8E%AF%E5%A2%83/</url>
+      
+        <content type="html"><![CDATA[<div class="note info simple"><p>摘要：Dockerfile 以前一直想看看是怎么写的，但是总忘。前一阵子在给实验室的服务器配环境，突然想起来用 dokcer 给每个同学开个虚拟环境，于是就研究了一下。这篇帖子就是总结一下我学到了什么些玩意。</p></div><h1 id="Dockerfile-的构成。"><a href="#Dockerfile-的构成。" class="headerlink" title="Dockerfile 的构成。"></a>Dockerfile 的构成。</h1><p>以下写一些主要会用到的。</p><ul><li><p>FROM：镜像从哪里来</p><p>比如想拉一个 tensorflow 的官方镜像，就可以这样写：</p></li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM tensorflow/tensorflow:latest-gpu</span><br></pre></td></tr></table></figure><ul><li><p>MAINTAINER：镜像维护者信息</p><p>虽然我也没搞明白这个具体有什么用，但是似乎是这样写的：</p></li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MAINTAINER &lt;name&gt;</span><br></pre></td></tr></table></figure><ul><li><p>RUN：构建镜像执行的命令，每一次RUN都会构建一层</p><p>这个应该属于重中之重了。语法比较简单，直接写 shell 命令就可。需要注意的是，比较好的习惯应该是一层 RUN 中执行很多条命令，而不是每条命令都在独立的一层 RUN 中。</p><p>可以用 <code>\</code> 作为结尾，在下一行开头使用 <code>&amp;&amp;</code> 来实现多个命令的执行。</p></li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">RUN apt-get update \</span><br><span class="line">&amp;&amp; apt-get install vim</span><br></pre></td></tr></table></figure><ul><li><p>CMD：容器启动的命令，如果有多个则以最后一个为准，也可以为ENTRYPOINT提供参数</p></li><li><p>ENV：变量属性值，容器内部也会起作用</p></li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ENV &lt;key&gt; &lt;value&gt;</span><br><span class="line">ENV &lt;key1&gt;=&lt;value1&gt; &lt;key2&gt;=&lt;value2&gt;...</span><br></pre></td></tr></table></figure><ul><li><p>ADD：添加文件，如果是压缩文件也解压</p></li><li><p>COPY：添加文件，以复制的形式</p></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>树莓派局域网共享打印机</title>
       <link href="/2023/03/13/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B1%E4%BA%AB%E6%89%93%E5%8D%B0%E6%9C%BA/"/>
       <url>/2023/03/13/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B1%E4%BA%AB%E6%89%93%E5%8D%B0%E6%9C%BA/</url>
@@ -96,9 +115,9 @@
       
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> docker </tag>
+            
+            <tag> Ubuntu </tag>
             
             <tag> Bochs </tag>
             
