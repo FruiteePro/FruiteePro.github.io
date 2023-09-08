@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>使用Pandoc将Markdown文件转为docx格式</title>
+      <link href="/2023/09/08/%E4%BD%BF%E7%94%A8%20Pandoc%20%E5%B0%86%20Markdown%20%E6%96%87%E4%BB%B6%E8%BD%AC%E4%B8%BA%20docx%20%E6%A0%BC%E5%BC%8F/"/>
+      <url>/2023/09/08/%E4%BD%BF%E7%94%A8%20Pandoc%20%E5%B0%86%20Markdown%20%E6%96%87%E4%BB%B6%E8%BD%AC%E4%B8%BA%20docx%20%E6%A0%BC%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<p>pandoc 是一个可以将文件转换成各种格式的软件，支持 macOS ，Windows 和 Linux 。</p><p>本篇文章主要记录如何将 Markdown 文件转换成 docx 。</p><h1 id="Pandoc-的安装"><a href="#Pandoc-的安装" class="headerlink" title="Pandoc 的安装"></a>Pandoc 的安装</h1><p>可以参考 <a href="https://pandoc.org/">Pandoc 官网</a> 。</p><p>macOS 可以用 brew 安装。各个系统可以用 conda 安装。</p><p>安装完成后，在终端输入 <code>pandoc --version</code> ，如有版本信息，则安装成功。</p><p>pandoc 安装完成后，需要安装 pandoc-xnos 插件。该插件主要功能是图片、表格、公式等编号的索引。插件使用 pip 安装。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install pandoc-xnos</span><br></pre></td></tr></table></figure><p>pandoc 生成 pdf 文件需要使用 Letax 工具。由于我并不需要转换为 pdf，因此这里暂不详述。</p><h1 id="Markdown-格式转换为-docx"><a href="#Markdown-格式转换为-docx" class="headerlink" title="Markdown 格式转换为 docx"></a>Markdown 格式转换为 docx</h1><p>笔者尝试了一些可以将 Markdown 格式进行展示的方法，但效果都不够好。最终发现转换成 docx 格式最适合在组会上展示。</p><p>根据相关资料，pandoc 直接将 Markdown 转成 docx 格式可能会出现格式问题。因此需要先转换为 html 格式，再转换为 docx。</p><p>具体终端命令为：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 转换为 html</span><br><span class="line">$ pandoc --mathml --from markdown-yaml_metadata_block &#x27;xxx.md&#x27; -o output.html</span><br><span class="line">// 转换为 docx</span><br><span class="line">$ pandoc --mathml .\output.html -o output2.docx </span><br></pre></td></tr></table></figure><p>其中，<code>--mathml</code> 用于调整公式渲染，将数学公式输出为 MathML 格式。</p><p><code>--from markdown-yaml_metadata_block</code> 用于完全解析 yaml 元数据块。</p><p>转换之后发现 docx 的公式还是有一些小问题，但是已经完全够用了。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Dockerfile 搭建使用 GPU 的 tensorflow 环境</title>
       <link href="/2023/04/12/Dockerfile%20%E6%90%AD%E5%BB%BA%E4%BD%BF%E7%94%A8%20GPU%20%E7%9A%84%20tensorflow%20%E7%8E%AF%E5%A2%83/"/>
       <url>/2023/04/12/Dockerfile%20%E6%90%AD%E5%BB%BA%E4%BD%BF%E7%94%A8%20GPU%20%E7%9A%84%20tensorflow%20%E7%8E%AF%E5%A2%83/</url>
