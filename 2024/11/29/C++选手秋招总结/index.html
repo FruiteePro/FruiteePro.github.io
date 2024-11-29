@@ -1,0 +1,217 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>C++选手秋招总结 | FruiteeBag</title><meta name="keywords" content="随笔"><meta name="author" content="Fruitee"><meta name="copyright" content="Fruitee"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="本文最早发表于牛客，自认为写得颇为用心，因此将其转载到个人博客。     秋招进行到现在终于能写总结了。完全没想到战线会拉这么长，过程会如此狼狈，不过更应该怪自己太菜了。好在所有的运气都用在了最后，也是有个去处。 背景：双2本硕科班，无竞赛，本科一段研究所实习，硕士一段大厂暑期实习但无转正。技术栈是C++ &amp; Golang，实习是客户端音视频（而且是鸿蒙端开发），简历两个C++项目一个Go">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++选手秋招总结">
+<meta property="og:url" content="http://fruiteepro.github.io/2024/11/29/C++%E9%80%89%E6%89%8B%E7%A7%8B%E6%8B%9B%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="FruiteeBag">
+<meta property="og:description" content="本文最早发表于牛客，自认为写得颇为用心，因此将其转载到个人博客。     秋招进行到现在终于能写总结了。完全没想到战线会拉这么长，过程会如此狼狈，不过更应该怪自己太菜了。好在所有的运气都用在了最后，也是有个去处。 背景：双2本硕科班，无竞赛，本科一段研究所实习，硕士一段大厂暑期实习但无转正。技术栈是C++ &amp; Golang，实习是客户端音视频（而且是鸿蒙端开发），简历两个C++项目一个Go">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://imagebed-1305813402.cos.ap-nanjing.myqcloud.com/images/IMG_20240923_173335.LMxAGC(2).jpeg">
+<meta property="article:published_time" content="2024-11-29T09:55:15.000Z">
+<meta property="article:modified_time" content="2024-11-29T09:58:40.574Z">
+<meta property="article:author" content="Fruitee">
+<meta property="article:tag" content="随笔">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://imagebed-1305813402.cos.ap-nanjing.myqcloud.com/images/IMG_20240923_173335.LMxAGC(2).jpeg"><link rel="shortcut icon" href="/img/favicon.JPG"><link rel="canonical" href="http://fruiteepro.github.io/2024/11/29/C++%E9%80%89%E6%89%8B%E7%A7%8B%E6%8B%9B%E6%80%BB%E7%BB%93/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查詢的內容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Fruitee","link":"連結: ","source":"來源: FruiteeBag","info":"著作權歸作者所有。商業轉載請聯絡作者獲得授權，非商業轉載請註明出處。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切換為繁體","cht_to_chs":"你已切換為簡體","day_to_night":"你已切換為深色模式","night_to_day":"你已切換為淺色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'C++选手秋招总结',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-11-29 17:58:40'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://imagebed-1305813402.cos.ap-nanjing.myqcloud.com/images/avatar2.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://imagebed-1305813402.cos.ap-nanjing.myqcloud.com/images/IMG_20240923_173335.LMxAGC(2).jpeg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">FruiteeBag</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜尋</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">C++选手秋招总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2024-11-29T09:55:15.000Z" title="發表於 2024-11-29 17:55:15">2024-11-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2024-11-29T09:58:40.574Z" title="更新於 2024-11-29 17:58:40">2024-11-29</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字數總計:</span><span class="word-count">1.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀時長:</span><span>5分鐘</span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote><p>本文最早发表于<a target="_blank" rel="noopener" href="https://www.nowcoder.com/discuss/690644101712154624">牛客</a>，自认为写得颇为用心，因此将其转载到个人博客。</p>
+</blockquote>
+
+
+
+<p>秋招进行到现在终于能写总结了。完全没想到战线会拉这么长，过程会如此狼狈，不过更应该怪自己太菜了。好在所有的运气都用在了最后，也是有个去处。</p>
+<p>背景：双2本硕科班，无竞赛，本科一段研究所实习，硕士一段大厂暑期实习但无转正。技术栈是C++ &amp; Golang，实习是客户端音视频（而且是鸿蒙端开发），简历两个C++项目一个Golang项目</p>
+<p>主要投递岗位：后端，cpp软开，游戏服务端，测开，以及一些不拘泥于Java的岗位</p>
+<p>从8月起总共投递123家公司，笔试数不清了，约面大约30家</p>
+<p>offer&#x2F;oc&#x2F;意向：<br>友塔游戏（第一个offer，面试体验很好，就是给钱好少<br>南瑞继保（计算机科班点击就送，不少同学签了<br>万得Wind（听说wlb，但是风评很差<br>深信服（感谢最佳雇主开出来的仨瓜俩枣<br>吉比特&#x2F;雷霆游戏（工具链开发，工作强度wlb，就是钱不多<br>中兴（AI相关，但钱少还pua，约面巨晚，一直问我能不能接受996<br>作业帮（核心部门，面试体验还行，但最后开出来个烂白菜<br>OPPO（岗位还行，但是不想去<br>荣耀（本来南京base，给我转到深圳了，而且hr态度巨差<br>金山（珠海很有性价比，hr说965，薪资可以接受<br>携程（非业务部门，工作强度听说不高</p>
+<p>泡池子：<br>虾皮（超级无敌大池子<br>华为（同上。本来一志愿上海，但是被部门捞到南京base，一开始以为是好事，后来发现其实是被坑了，接口人还问啥都说不知道，被气晕</p>
+<p>各种挂：<br>陌陌池子泡死（估计是hr面说错话了吧<br>字节八面挂（两次三面排序挂，化身字节黑子<br>拓竹二面完无消息（公司体量小，招人可能不多<br>腾讯一面挂<br>美团一面挂<br>快手一面挂<br>帆软一面挂<br>小米一面挂<br>网易互娱一面挂<br>招行信用卡中心一面完无消息</p>
+<p>还有一些零零散散kpi面，以及约面被我拒了的</p>
+<p>最后再写点总结，就稍微随意一点，想到哪就写到哪了</p>
+<p>关于能不能学cpp：</p>
+<p>如果能重来一次，我一定一定不会选cpp这条道路了（笑）。虽然我真的蛮喜欢cpp这门编程语言的，但是它真的不适合找工作。过往陈述cpp不好找工作的帖子数不胜数，我在暑期实习总结里也吐槽过了，希望各位即将面临秋招季的同学及时听劝，不要被某些流量大v忽悠。学个cpp冲后端放在几年前也许是捷径，但如今就业寒潮下没有快速通道，想走后端还是老老实实学Java或者Golang。cpp不是后端语言，只学个cpp最终的归宿可能就是翻车干到客户端（牛客有多少个“客户端劝退第x人”就不用我多说了吧）。</p>
+<p>个人认为学cpp适合以下几种人：想走游戏客户端&#x2F;引擎&#x2F;服务端开发的，想走QT开发的，想走嵌入式软开的，想进军工研究所的，想就靠学历进学历厂的（byd，华为，中兴，荣耀，tp等等），在某些特定领域（高性能计算，图形学，数据库研发，操作系统内核研发等等）很有建树的组里读研做过项目&#x2F;发过论文的，以及完全没时间准备秋招的（不得不学了）。</p>
+<p>关于找暑期实习：</p>
+<p>我的个人经验是，暑期实习还是建议去一个转正机会大的厂。当初拿了鹅厂的暑期实习的我很高兴，拒了不少别的公司，但最后转正寄了，直接成为小丑🤡。此时有不少同学当初找的实习虽然不如我，但纷纷转正，拿到了保底offer，整得我心态有点小爆炸。其实暑期实习是一个快速拿offer的机会，拿到保底，然后再用这段经历去冲击大厂，这样的策略应该会更稳妥一些。</p>
+<p>关于秋招投递简历的时间：</p>
+<p>秋招比较后悔的一件事就是八月初的时候没有投简历，因为那时候还在实习，想着没啥时间准备秋招。然而这一波没投感觉错失了很多机会。结论就是秋招投简历的时间还是要越早越好，那时候各个大厂hc比较充足，运气好的话一波就直接拿下了。越到后面，hc发的差不多了，面试难度会更高。</p>
+<p>关于逼签三方：</p>
+<p>逼签三方真的是秋招期间碰到的最恶心的事情之一（其余的还有测评、kpi面以及泡池子）。三方保护学校就业率，保护企业稳定招人，唯独不保护学生选择工作的权利。逼签三方的公司真就是一点都没把学生当成自己未来的员工，而是当成呼之即来的牛马，要是再拖毁约流程就真的恶心到家了（说的就是你荣耀）。但被逼签作为学生真的也没什么办法，尤其是在等后面可能有更好的工作机会的时候。荣耀逼签的时候我真的心情十分痛苦，不想就这么签了，但又怕后面的机会开不出来，最后还是把荣耀拒了。好在后面开出来了更满意的offer，不然真就寄了。</p>
+<p>最后一点碎碎念：</p>
+<p>个人认为秋招有三样东西最重要：实力，运气，以及最重要的，努力下去的决心。秋招不是考试，看不到排名，也没有进度条，没人知道这烂透了的日子的终点究竟在哪。oc电话可能是下一秒打过来，但也可能是一个月之后。每个人的进度也不一样，有些人可能没怎么准备也能找到了很好的工作，有些人可能要苦苦支撑很久，最后工作依旧不理想。so和其他人比较是没有意义的，只能尽自己所能，准备好每一场面试，不放过任何一个机会。实力与你接近的人有很多很多，大部分人运气也好不到哪里去，作为秋招浪潮里微不足道的一个个体，我们能做的只有继续下去，努力面试，努力生活。摆烂当然也可以，但万一再努力一点就有梦寐以求的机会了呢？</p>
+<p>不过话又说回来，就算没能拿到理想的工作，人生也不是到这里就开始结算排rank的。这仅仅是一个阶段性的结果，以后的日子还长，各位还有广阔天地大有可为，不用纠结于一次秋招的得失。若干年之后遇到更好的机会应该是大概率事件。</p>
+<p>最后，感谢看我讲这么多废话的牛u们，感谢朋友们一直以来对我的帮助和支持，感谢牛客这个平台给了我和相同境遇的朋友们相遇的机会。</p>
+<p>祝所有的朋友们都能得偿所愿，拿到自己满意的offer。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://fruiteepro.github.io">Fruitee</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="http://fruiteepro.github.io/2024/11/29/C++%E9%80%89%E6%89%8B%E7%A7%8B%E6%8B%9B%E6%80%BB%E7%BB%93/">http://fruiteepro.github.io/2024/11/29/C++%E9%80%89%E6%89%8B%E7%A7%8B%E6%8B%9B%E6%80%BB%E7%BB%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="http://fruiteepro.github.io" target="_blank">FruiteeBag</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></div><div class="post_share"><div class="social-share" data-image="https://imagebed-1305813402.cos.ap-nanjing.myqcloud.com/images/IMG_20240923_173335.LMxAGC(2).jpeg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/09/25/C++17%20%E5%AE%9E%E7%8E%B0%E7%AE%80%E6%98%93%E7%BA%BF%E7%A8%8B%E6%B1%A0/"><img class="next-cover" src="https://imagebed-1305813402.cos.ap-nanjing.myqcloud.com/images/P1000360.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">C++17 实现简易线程池</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相關推薦</span></div><div class="relatedPosts-list"><div><a href="/2022/06/22/%E6%88%90%E9%83%BD%E6%B8%B8%E8%AE%B0/" title="游记 ｜ 成都"><img class="cover" src="https://imagebed-1305813402.cos.ap-nanjing.myqcloud.com/images/IMG_7723.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-06-22</div><div class="title">游记 ｜ 成都</div></div></a></div><div><a href="/2023/03/01/%E4%B8%80%E5%88%87%E9%83%BD%E4%B8%BA%E4%BA%86%E8%87%AA%E5%B7%B1%E7%9A%84Chatgpt/" title="一切都是为了自己的Chatgpt"><img class="cover" src="https://imagebed-1305813402.cos.ap-nanjing.myqcloud.com/images/IMG_0211.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-01</div><div class="title">一切都是为了自己的Chatgpt</div></div></a></div><div><a href="/2022/05/20/%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE%E8%87%B4%E8%B0%A2/" title="致谢｜2022年5月"><img class="cover" src="https://imagebed-1305813402.cos.ap-nanjing.myqcloud.com/images/P1040271.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-20</div><div class="title">致谢｜2022年5月</div></div></a></div><div><a href="/2022/05/05/%E9%9A%8F%E7%AC%94%E5%87%A0%E5%88%99/" title="随笔几则"><img class="cover" src="https://imagebed-1305813402.cos.ap-nanjing.myqcloud.com/images/IMG_8411.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-05</div><div class="title">随笔几则</div></div></a></div><div><a href="/2024/07/01/2024.7.1%20%E8%AE%B0%E5%A4%A7%E5%8E%82%E6%89%93%E5%B7%A5/" title="记大厂打工"><img class="cover" src="https://imagebed-1305813402.cos.ap-nanjing.myqcloud.com/images/P20240330-100958(1).jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-01</div><div class="title">记大厂打工</div></div></a></div><div><a href="/2024/08/26/%E8%AE%B0%E5%A4%A7%E5%8E%82%E7%A6%BB%E8%81%8C/" title="记大厂离职"><img class="cover" src="https://imagebed-1305813402.cos.ap-nanjing.myqcloud.com/images/P20240820-120129_1.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-08-26</div><div class="title">记大厂离职</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 評論</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://imagebed-1305813402.cos.ap-nanjing.myqcloud.com/images/avatar2.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Fruitee</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/FruiteePro"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/FruiteePro" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://space.bilibili.com/23938356" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎给我打钱！如果你不缺钱的话～</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/11/29/C++%E9%80%89%E6%89%8B%E7%A7%8B%E6%8B%9B%E6%80%BB%E7%BB%93/" title="C++选手秋招总结"><img src="https://imagebed-1305813402.cos.ap-nanjing.myqcloud.com/images/IMG_20240923_173335.LMxAGC(2).jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++选手秋招总结"/></a><div class="content"><a class="title" href="/2024/11/29/C++%E9%80%89%E6%89%8B%E7%A7%8B%E6%8B%9B%E6%80%BB%E7%BB%93/" title="C++选手秋招总结">C++选手秋招总结</a><time datetime="2024-11-29T09:55:15.000Z" title="發表於 2024-11-29 17:55:15">2024-11-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/25/C++17%20%E5%AE%9E%E7%8E%B0%E7%AE%80%E6%98%93%E7%BA%BF%E7%A8%8B%E6%B1%A0/" title="C++17 实现简易线程池"><img src="https://imagebed-1305813402.cos.ap-nanjing.myqcloud.com/images/P1000360.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++17 实现简易线程池"/></a><div class="content"><a class="title" href="/2024/09/25/C++17%20%E5%AE%9E%E7%8E%B0%E7%AE%80%E6%98%93%E7%BA%BF%E7%A8%8B%E6%B1%A0/" title="C++17 实现简易线程池">C++17 实现简易线程池</a><time datetime="2024-09-25T09:18:47.000Z" title="發表於 2024-09-25 17:18:47">2024-09-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/09/%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="常用设计模式"><img src="https://imagebed-1305813402.cos.ap-nanjing.myqcloud.com/images/IMG_20240706_145115.LMxAGC.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="常用设计模式"/></a><div class="content"><a class="title" href="/2024/09/09/%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="常用设计模式">常用设计模式</a><time datetime="2024-09-09T03:24:03.000Z" title="發表於 2024-09-09 11:24:03">2024-09-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/26/%E8%AE%B0%E5%A4%A7%E5%8E%82%E7%A6%BB%E8%81%8C/" title="记大厂离职"><img src="https://imagebed-1305813402.cos.ap-nanjing.myqcloud.com/images/P20240820-120129_1.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="记大厂离职"/></a><div class="content"><a class="title" href="/2024/08/26/%E8%AE%B0%E5%A4%A7%E5%8E%82%E7%A6%BB%E8%81%8C/" title="记大厂离职">记大厂离职</a><time datetime="2024-08-26T15:30:28.000Z" title="發表於 2024-08-26 23:30:28">2024-08-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/01/2024.7.1%20%E8%AE%B0%E5%A4%A7%E5%8E%82%E6%89%93%E5%B7%A5/" title="记大厂打工"><img src="https://imagebed-1305813402.cos.ap-nanjing.myqcloud.com/images/P20240330-100958(1).jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="记大厂打工"/></a><div class="content"><a class="title" href="/2024/07/01/2024.7.1%20%E8%AE%B0%E5%A4%A7%E5%8E%82%E6%89%93%E5%B7%A5/" title="记大厂打工">记大厂打工</a><time datetime="2024-07-01T14:18:09.000Z" title="發表於 2024-07-01 22:18:09">2024-07-01</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024 By Fruitee</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="簡繁轉換">簡</button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button id="translateLink" type="button" title="簡繁轉換">簡</button><a id="to_comment" href="#post-comment" title="直達評論"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜尋</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  資料庫載入中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜尋文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'AlNrdORWm4jUMgBVBSC9y7sN-gzGzoHsz',
+      appKey: 'ycwqHUuxrHvMjQM76rmvY4vo',
+      avatar: 'retro',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
