@@ -6,7 +6,7 @@
   <link href="http://fruiteepro.github.io/atom.xml" rel="self"/>
   
   <link href="http://fruiteepro.github.io/"/>
-  <updated>2024-11-29T09:58:40.574Z</updated>
+  <updated>2025-01-01T15:08:29.908Z</updated>
   <id>http://fruiteepro.github.io/</id>
   
   <author>
@@ -17,18 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>C++选手秋招总结</title>
-    <link href="http://fruiteepro.github.io/2024/11/29/C++%E9%80%89%E6%89%8B%E7%A7%8B%E6%8B%9B%E6%80%BB%E7%BB%93/"/>
-    <id>http://fruiteepro.github.io/2024/11/29/C++%E9%80%89%E6%89%8B%E7%A7%8B%E6%8B%9B%E6%80%BB%E7%BB%93/</id>
-    <published>2024-11-29T09:55:15.000Z</published>
-    <updated>2024-11-29T09:58:40.574Z</updated>
+    <title>2024年终总结</title>
+    <link href="http://fruiteepro.github.io/2025/01/01/2024%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
+    <id>http://fruiteepro.github.io/2025/01/01/2024%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</id>
+    <published>2025-01-01T14:43:47.000Z</published>
+    <updated>2025-01-01T15:08:29.908Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;blockquote&gt;&lt;p&gt;本文最早发表于&lt;a href=&quot;https://www.nowcoder.com/discuss/690644101712154624&quot;&gt;牛客&lt;/a&gt;，自认为写得颇为用心，因此将其转载到个人博客</summary>
+    <summary type="html">&lt;p&gt;总结写得稍微晚了一点，已经是2025年了，因为最近正值论文提交，挤出点自己的时间属实不易。但无论如何，在岁末年初这个节点，对2024一整年写点总结还是十分有必要的。以前似乎并没有这个习惯，但现在愈发觉得还是写会更好，趁年末回顾过去，总结经验，以期未来会更好</summary>
         
       
     
@@ -41,8 +41,8 @@
   
   <entry>
     <title>C++选手秋招总结</title>
-    <link href="http://fruiteepro.github.io/2024/11/29/2024%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
-    <id>http://fruiteepro.github.io/2024/11/29/2024%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</id>
+    <link href="http://fruiteepro.github.io/2024/11/29/C++%E9%80%89%E6%89%8B%E7%A7%8B%E6%8B%9B%E6%80%BB%E7%BB%93/"/>
+    <id>http://fruiteepro.github.io/2024/11/29/C++%E9%80%89%E6%89%8B%E7%A7%8B%E6%8B%9B%E6%80%BB%E7%BB%93/</id>
     <published>2024-11-29T09:55:15.000Z</published>
     <updated>2024-11-29T09:58:40.574Z</updated>
     
